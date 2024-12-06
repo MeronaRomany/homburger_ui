@@ -15,7 +15,8 @@ class _HeaderState extends State<Header> {
         delegate:SliverChildListDelegate(
           [
             Stack(
-              children:[ Column(
+              children:[
+                Column(
                 children: [
                   Container(
                     height: 200,
@@ -68,32 +69,33 @@ class _HeaderState extends State<Header> {
                           ),
                         ),
 
-                        Positioned(
-                          bottom: 0,
-                          child: Container(
-                            width: 310,
 
-                            child: Card(
-                              child: TextFormField(
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  hintText: "what does your belly want ?",
-                                  suffixIcon: Icon(Icons.search_rounded),
-                                  contentPadding: EdgeInsets.all(8.0),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
                       ],
                     ),
 
                   ),
 
-
+                 SizedBox(height: 20,),
                 ],
               ),
-
+                Positioned(
+                  bottom: 0,
+                  child: Container(
+                    width: 310,
+                    margin: EdgeInsets.only(left: 45.0),
+                    child: Card(
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "what does your belly want ?",
+                          hintStyle: TextStyle(fontSize: 18),
+                          suffixIcon: Icon(Icons.search_rounded),
+                          contentPadding: EdgeInsets.all(8.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
              ]
             ),
           ]

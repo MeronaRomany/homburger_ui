@@ -14,7 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
      theme: ThemeData(
-       appBarTheme: AppBarTheme(color: Colors.teal)
+       appBarTheme: AppBarTheme(color: Colors.teal),
+       floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: Colors.teal),
+       bottomAppBarTheme: BottomAppBarTheme(color: Colors.teal),
+
      ),
       home: HamburgerPage(),
     );
