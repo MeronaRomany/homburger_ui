@@ -12,10 +12,11 @@ class _CatagoriesState extends State<Catagories> {
   @override
   Widget build(BuildContext context) {
 
-    return SliverToBoxAdapter(
-      child: SizedBox(
-        height: 130,
-        child: Expanded(
+    return SizedBox(
+      height: 130,
+      child: Expanded(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,

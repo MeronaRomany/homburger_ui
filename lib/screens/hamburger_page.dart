@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hamburger_ui/widgets/header.dart';
 
+import '../widgets/burgerList.dart';
 import '../widgets/catagories.dart';
 
 class HamburgerPage extends StatefulWidget {
@@ -20,7 +21,7 @@ class _HamburgerPageState extends State<HamburgerPage> {
         child: FloatingActionButton(
             onPressed: (){},
           child: Icon(Icons.home_filled,color: Colors.white),
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.orange,
           elevation: 5,
           splashColor: Colors.black,
         ),
@@ -45,26 +46,49 @@ class _HamburgerPageState extends State<HamburgerPage> {
         ),
       ),
 
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            pinned: true,
-            leading: Icon(Icons.menu,color: Colors.white,),
-            title: Text("Devider Me",style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),),
-            actions: [Padding(
-              padding: EdgeInsets.only(right: 5),
-              child: Icon(Icons.shopping_cart,color: Colors.white),
-            )],
-            centerTitle: true,
-          ),
-          Header(),
-          //SizedBox(height: 10,),
-          Catagories(),
-        ],
-      ),
+       body: SingleChildScrollView(
+         child: Column(children: [
+           AppBar(
+             leading: Icon(Icons.menu,color: Colors.white,),
+                   title: Text("Devider Me",style: TextStyle(
+                     fontWeight: FontWeight.bold,
+                     color: Colors.white,
+                   ),),
+         actions: [Padding(
+                         padding: EdgeInsets.only(right: 5),
+                         child: Icon(Icons.shopping_cart,color: Colors.white),
+                       )],
+                       centerTitle: true,
+           ),
+           Header(),
+           Catagories(),
+           Burgerlist(),
+         ],),
+
+       )
+
+      //CustomScrollView(
+      //   slivers: [
+      //     SliverAppBar(
+      //       pinned: true,
+      //       leading: Icon(Icons.menu,color: Colors.white,),
+      //       title: Text("Devider Me",style: TextStyle(
+      //         fontWeight: FontWeight.bold,
+      //         color: Colors.white,
+      //       ),),
+      //       actions: [Padding(
+      //       //         padding: EdgeInsets.only(right: 5),
+      //       //         child: Icon(Icons.shopping_cart,color: Colors.white),
+      //       //       )],
+      //       //       centerTitle: true,
+      //     ),
+      //     Header(),
+      //
+      //     Catagories(),
+      //
+      //     Burgerlist(),
+      //   ],
+      // ),
     );
   }
 }

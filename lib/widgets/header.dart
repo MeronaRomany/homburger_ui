@@ -11,9 +11,8 @@ class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
 
-    return SliverList(
-        delegate:SliverChildListDelegate(
-          [
+    return
+
             Stack(
               children:[
                 Column(
@@ -51,10 +50,17 @@ class _HeaderState extends State<Header> {
                                          //fontWeight: FontWeight.bold,
                                          color: Colors.white,
                                        ),),
-                                       Text("Gold Member",style: TextStyle(
-                                         fontSize: 18,
-                                           color: Colors.white,
-                                       ),),
+                                       Container(
+                                         decoration: BoxDecoration(
+                                           color: Colors.black.withOpacity(0.5),
+                                           borderRadius: BorderRadius.circular(20),
+                                         ),
+
+                                         child: Text("Gold Member",style: TextStyle(
+                                           fontSize: 18,
+                                             color: Colors.white,
+                                         ),),
+                                       ),
                                      ],
                                     ),
                                     Spacer(),
@@ -97,8 +103,6 @@ class _HeaderState extends State<Header> {
                   ),
                 ),
              ]
-            ),
-          ]
-        ) );
+            );
   }
 }
